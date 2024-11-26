@@ -1,64 +1,40 @@
 body {
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color:#c2d8c2;
+    background-image: linear-gradient(to right, rgb(168, 149, 157) , rgb(209, 155, 193));
 }
 
-#main {
+.container{
     text-align: center;
+
+}
+
+#board{
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
+    width: 300px;
+    margin: 0 auto;
+}
+
+.square{
+    display: flex;
+    width: 90px;
+    height: 90px;
+    background-color: rgb(255, 255, 255);
+    margin: 5px;
+    border-radius: 5px;
+    font-size: 50px;
     justify-content: center;
     align-items: center;
-    padding: 20px;
-    box-shadow: 0 4px 10px rgba(1, 8, 37, 0.1);
-    border-radius: 10px;
-    background-color: #c7dfdd;
-}
-
-.board {
-    display: grid;
-    grid-template-columns: repeat(3, 100px);
-    grid-gap: 5px;
-    margin-top: 20px;
-}
-
-p {
-    font-family:Georgia, 'Times New Roman', Times, serif;
-}
-
-.cell {
-    width: 100px;
-    height: 100px;
-    border: 1px solid gray;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 24px;
     cursor: pointer;
 }
 
-.cell.taken {
-    pointer-events: none;
-}
-.message {
-    margin-top: 20px;
-    font-size: 18px;
-    font-weight: bold;
+.square:hover{
+    background-color: #ffe8ff;
 }
 
-.reset {
-    margin-top: 20px;
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    background-color: rgb(188, 198, 224);
-    border: 1px solid rgb(0, 0, 0);
-    color: rgb(0, 0, 0);
-    border-radius: 8px;
+.square:X{
+    color: rgb(70, 106, 139);
+}
+
+.square:O {
+    color: rgb(100, 28, 28);
 }
